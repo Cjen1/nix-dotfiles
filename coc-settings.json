@@ -1,0 +1,16 @@
+{
+  "rust-analyzer.serverPath": "rust-analyzer",
+  "languageserver": {
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": [ "nix" ]
+    }
+    "ocaml": {
+      "command": "ocamllsp",
+      "rootPatterns": ["dune-project"],
+      "filetypes": ["ocaml"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
+}
