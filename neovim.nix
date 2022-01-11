@@ -9,11 +9,16 @@ pkgs:
   plugins = with pkgs.vimPlugins; [
     nerdtree
     lightline-vim
-    coc-nvim
     vim-nix
     rust-vim
+    coc-nvim
     coc-rust-analyzer
   ];
+
+  coc = {
+    enable = true;
+    settings = builtins.readFile ./coc-settings.json;
+  };
 
   extraConfig = builtins.readFile ./neovim-extra.cfg;
 }
