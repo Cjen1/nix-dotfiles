@@ -1,10 +1,23 @@
 {
   "rust-analyzer.serverPath": "rust-analyzer",
+  {
+  "texlab.build.executable": "tectonic",
+  "texlab.build.args": [
+      "%f",
+      "--synctex",
+      "--keep-logs",
+      "--keep-intermediates"
+    ],
   "languageserver": {
     "nix": {
       "command": "rnix-lsp",
       "filetypes": [ "nix" ]
-    }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
     "ocaml": {
       "command": "ocamllsp",
       "rootPatterns": ["dune-project"],

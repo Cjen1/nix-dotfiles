@@ -11,8 +11,14 @@ pkgs:
     lightline-vim
     vim-nix
     rust-vim
+    vim-snippets
+    vim-surround
+    vim-autoformat
     coc-nvim
     coc-rust-analyzer
+    coc-snippets
+    coc-texlab
+    coc-spell-checker
   ];
 
   coc = {
