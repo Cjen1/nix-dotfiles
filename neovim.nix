@@ -25,6 +25,7 @@ pkgs:
     enable = true;
     settings = {
       "rust-analyzer.serverPath" = "rust-analyzer";
+      "java.jdt.ls.vmargs" = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Xlog:disable -Xlog:all=warning:stderr:uptime,level,tags";
     };
   };
 
