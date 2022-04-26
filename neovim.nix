@@ -23,7 +23,9 @@ pkgs:
 
   coc = {
     enable = true;
-    settings = builtins.readFile ./coc-settings.json;
+    settings = {
+      "rust-analyzer.serverPath" = "rust-analyzer";
+    };
   };
 
   extraConfig = builtins.readFile ./neovim-extra.cfg;

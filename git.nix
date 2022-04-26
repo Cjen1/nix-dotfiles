@@ -10,6 +10,8 @@ pkgs:
   extraConfig = {
     init.defaultBranch = "main";
     core.editor = "vim";
+    #core.excludesfile = let gitignore = builtins.toFile "gitignore" (builtins.readFile "./.gitignore"); in "${gitignore}";
+    #core.excludesfile = builtins.toFile "gitignore" (builtins.readFile "./.gitignore");
   };
   ignores = [
     "*.swp"
