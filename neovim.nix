@@ -1,6 +1,16 @@
 pkgs:
 
-{
+let 
+  vimtla = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-tla";
+    src = pkgs.fetchFromGitHub {
+      owner = "florentc";
+      repo = "vim-tla";
+      rev = "220145ef791ac8d64d2c319eb2940b59da17d6ca";
+      sha256 = "YdXBzxB5yfpPJJ1wVRdl6i1rPDzgwrxB1Onlkixk4/c=";
+    };
+  };
+in{
   enable = true;
   vimAlias = true;
   vimdiffAlias = true;
@@ -19,6 +29,7 @@ pkgs:
     coc-snippets
     coc-texlab
     coc-spell-checker
+    vimtla
   ];
 
   coc = {
